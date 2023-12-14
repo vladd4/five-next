@@ -14,7 +14,7 @@ export default function ProfileInfo({ user }) {
   const [email, setEmail] = useState(user?.email);
   const [telegram, setTelegram] = useState(user?.telegram);
 
-  const handleUpdate = () => {
+  const handleUpdate = async () => {
     const params = {
       userId: 1,
       name,
@@ -23,7 +23,7 @@ export default function ProfileInfo({ user }) {
       phone,
       telegram,
     };
-    dispatch(updateUser(params));
+    await dispatch(updateUser(params));
     dispatch(fetchUser(1));
   };
 
