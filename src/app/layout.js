@@ -2,6 +2,7 @@ import { Montserrat } from "next/font/google";
 import "@/styles/globals.scss";
 import ReduxProvider from "@/redux/Provider";
 import Header from "@/components/Header/Header";
+import AlertItem from "@/components/Alert";
 
 const inter = Montserrat({ subsets: ["latin"], display: "fallback" });
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ReduxProvider>
           <Header />
+          <AlertItem text="Successfuly added to saved search!" />
           {children}
         </ReduxProvider>
       </body>

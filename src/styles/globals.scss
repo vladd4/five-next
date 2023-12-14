@@ -59,3 +59,10 @@ body {
 .loaded .loader {
   display: none;
 }
+.alert {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 2% !important;
+  width: 30% !important;
+  z-index: 1001 !important;
+}

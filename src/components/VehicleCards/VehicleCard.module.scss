@@ -56,7 +56,8 @@
                 h3 {
                     color: $color-dark-grey;
                     font-size: calc(#{$size}*1.2);
-                    margin: 0%;
+                    margin: 0;
+                    font-weight: 600;
                 }
                 .car_info_icons {
                     display: grid;
@@ -72,7 +73,7 @@
                         p {
                             color: $color-dark-grey;
                             font-size: calc(#{$size}/1.4);
-                            width: auto;
+                            margin: 10% 0%;
                         }
                         img {
                             width: 10%;
@@ -95,6 +96,7 @@
             p {
                 color: $color-dark-grey;
                 font-size: calc(#{$size}/1.2);
+                margin: 7% 0%;
             }
         }
     }

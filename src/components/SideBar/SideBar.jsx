@@ -19,6 +19,7 @@ import { addToSaved } from "@/redux/slices/savedSlice";
 import Search from "@/../public/search.png";
 import Sub from "@/../public/sub_icon.png";
 import Plus from "@/../public/plus.png";
+import { setShowAlert } from "@/redux/slices/alertSlice";
 
 export default function SideBar() {
   const dispatch = useDispatch();
@@ -151,6 +152,7 @@ export default function SideBar() {
       telegram: 1,
     };
     dispatch(addToSaved(params));
+    dispatch(setShowAlert(true));
   };
   useEffect(() => {
     dispatch(fetchBrands());
