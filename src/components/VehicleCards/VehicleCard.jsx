@@ -10,12 +10,7 @@ import Gear from "@/../public/gear.png";
 
 export default function VehicleCard(props) {
   return (
-    <a
-      href={props.websiteLink}
-      target="_black"
-      rel="noreferrer"
-      className={styles.root}
-    >
+    <a target="_black" rel="noreferrer" className={styles.root}>
       <article className={styles.wrapper}>
         <div className={styles.car_block}>
           <div

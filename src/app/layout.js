@@ -1,8 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "@/styles/globals.scss";
-import { Suspense } from "react";
-import Loading from "./loading";
 import ReduxProvider from "@/redux/Provider";
+import Header from "@/components/Header/Header";
 
 const inter = Montserrat({ subsets: ["latin"], display: "fallback" });
 
@@ -15,7 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ReduxProvider>{children}</ReduxProvider>
+        <ReduxProvider>
+          <Header />
+          {children}
+        </ReduxProvider>
       </body>
     </html>
   );

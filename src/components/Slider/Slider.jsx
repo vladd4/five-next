@@ -21,6 +21,7 @@ export default function Slider() {
         drag: true,
         perPage: 1,
         arrows: false,
+        pagination: true,
       }}
       className={styles.root}
     >
@@ -35,7 +36,7 @@ export default function Slider() {
               <Image alt="Telegram" src={Tg} width={128} height={70} />
             </p>
           </div>
-          <Image alt="Porsche" src={Car} width={1130} height={300} />
+          <Image alt="Porsche" src={Car} width={310} height={120} />
         </article>
       </SplideSlide>
       <SplideSlide id="slide">
@@ -49,7 +50,7 @@ export default function Slider() {
               <Image alt="Telegram" src={Tg} width={128} height={70} />
             </p>
           </div>
-          <Image alt="Porsche" src={Car} width={1130} height={300} />
+          <Image alt="Porsche" src={Car} width={310} height={120} />
         </article>
       </SplideSlide>
       <SplideSlide id="slide">
@@ -63,7 +64,7 @@ export default function Slider() {
               <Image alt="Telegram" src={Tg} width={128} height={70} />
             </p>
           </div>
-          <Image alt="Porsche" src={Car} width={1130} height={300} />
+          <Image alt="Porsche" src={Car} width={310} height={120} />
         </article>
       </SplideSlide>
     </Splide>

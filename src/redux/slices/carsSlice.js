@@ -14,6 +14,7 @@ export const fetchFilterCars = createAsyncThunk(
   }
 );
 
+
 const initialState = {
   cars: [],
   status: "loading",

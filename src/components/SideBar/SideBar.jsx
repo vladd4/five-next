@@ -14,6 +14,7 @@ import {
   fetchState,
   fetchTransmission,
 } from "../../redux/slices/filtersSlice";
+import { addToSaved } from "@/redux/slices/savedSlice";
 
 import Search from "@/../public/search.png";
 import Sub from "@/../public/sub_icon.png";
@@ -121,6 +122,35 @@ export default function SideBar() {
       from: "",
       to: "",
     });
+  };
+  const addToFavourites = () => {
+    const selectedBrand = brandOptions.find((option) => option.brand === brand);
+    const selectedModel = modelOptions.find((option) => option.model === model);
+    const selectedFuel = fuelOptions.find((option) => option.fuel === fuel);
+    const selectedGear = gearOptions.find(
+      (option) => option.gearbox === gearbox
+    );
+    const selectedState = stateOptions.find((option) => option.state === state);
+    const selectedTrans = transmissionOptions.find(
+      (option) => option.transmission === transmission
+    );
+    const params = {
+      client_id: "1",
+      brand_id: selectedBrand?.id,
+      model_id: selectedModel?.id,
+      max_price: "10000",
+      min_price: "7000",
+      min_year: "2015",
+      max_year: "2022",
+      state_id: selectedState?.id,
+      gearbox_id: selectedGear?.id,
+      transmission_id: selectedTrans?.id,
+      fuel_id: selectedFuel?.id,
+      max_power: "100",
+      min_power: "190",
+      telegram: 1,
+    };
+    dispatch(addToSaved(params));
   };
   useEffect(() => {
     dispatch(fetchBrands());
@@ -334,7 +364,13 @@ export default function SideBar() {
               <Image alt="Search" src={Search} width={40} height={40} /> Пoшук
             </button>
             <button className={styles.add_button}>
-              <Image alt="Sub" src={Sub} width={18} height={23} />
+              <Image
+                onClick={addToFavourites}
+                alt="Sub"
+                src={Sub}
+                width={18}
+                height={23}
+              />
             </button>
           </div>
         </div>
