@@ -40,6 +40,7 @@ export default function ProfileInfo({ user }) {
               <label className={styles.input_label}>First name</label>
               <input
                 placeholder="Name"
+                name="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -48,6 +49,7 @@ export default function ProfileInfo({ user }) {
               <label className={styles.input_label}>Last name</label>
               <input
                 placeholder="Last Name"
+                name="surname"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
@@ -56,6 +58,7 @@ export default function ProfileInfo({ user }) {
               <label className={styles.input_label}>Phone</label>
               <input
                 placeholder="Phone"
+                name="phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
@@ -64,6 +67,7 @@ export default function ProfileInfo({ user }) {
               <label className={styles.input_label}>Email</label>
               <input
                 placeholder="Email"
+                name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
